@@ -7,7 +7,7 @@
 	$dbname = "inventory";
 			
 	$conn = mysqli_connect($servername, $username, $password, $dbname) or die("bad connection: ".mysqli_connect_error());
-    $sql = "SELECT p_id, p_name, p_qty FROM inventory";
+    	$sql = "SELECT p_id, p_name, p_qty FROM inventory";
 	
 	$result = $conn->query($sql);
 	if ($result->num_rows >  0) {
