@@ -32,21 +32,17 @@
   <body>
     <main>
         <h1>Welcome to My Website</h1>
-        <form action="add.php" method="post">
-        	<!--Item ID-->
-        	<label for="ItemID">Item ID</label><br>
-        	<input name="itemid" id="itemid" type="text" p_id="Item ID"><br><br>
-
-        	<!--Item Name-->
-        	<label for="ItemName">Item Name</label><br>
-        	<input name="itemname" id="itemname" type="text" p_name="Item Name"><br><br>
-
-        	<!--Item Quantity-->
-        	<label for="ItemQuan">Item Quantity</label><br>
-        	<input name="itemquantity" id="itemquantity" type="text" p_quantity="Item Quantity"><br><br>
-
-        	<!--Add Item Button-->
-        	<input type="submit" value="Add Item">
+        <div class="item">
+            <span>Item ID:</span>
+            <span id="item-id">12345</span>
+        </div>
+        <div class="item">
+            <span>Item Name:</span>
+            <span id="item-name">Example Item</span>
+        </div>
+        <div class="item">
+            <span>Qty:</span>
+            <span id="item-qty">10</span>
         </form>
     </main>
   </body>
