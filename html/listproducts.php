@@ -23,11 +23,14 @@
 	
 		$result = $conn->query($sql);
 		if ($result->num_rows >  0) {
+			echo "<table border='1'>";
 			while ($row=$result->fetch_assoc()){
-				echo $row["p_id"]. " ".$row["p_name"]." ".$row["p_quantity"];
+				echo "<td style='border: 1px solid black; padding: 5px; '>".$row["p_id"]."</td>";
+				echo "<td style='border: 1px solid black; padding: 5px; '>".$row["p_name"]."</td>";
+				echo "<td style='border: 1px solid black; padding: 5px; '>".$row["p_quantity"]."</td>";
 			echo"<br><br>";
 			}
-    		}
+    	}
 		else{
 			echo "Empty";
 		}
