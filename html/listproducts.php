@@ -15,7 +15,7 @@
 			echo $row["p_id"]. " ".$row["p_name"]." ".$row["p_qty"];
 		echo"<br><br>";
 		}
-    }
+    	}
 	else{
 		echo "Empty";
 	}
