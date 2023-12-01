@@ -32,7 +32,7 @@
         		$dbname = "inventory";
 
         		$conn = mysqli_connect($servername, $username, $password, $dbname) or die("bad connection: ".mysqli_connect_error());
-        		$sql = "INSERT INTO inventory (p_id, p_name, p_quantity) VALUES (498, 'test2222', 30);";
+        		$sql = "INSERT INTO inventory (p_id, p_name, p_quantity) VALUES ($_POST["itemid"], '$_POST["itemname"]', $_POST["itemquantity"]);";
 
         		$result = $conn->query($sql);
 
