@@ -30,11 +30,10 @@
 				echo "<td style='border: 1px solid black; padding: 5px; '>".$row["p_quantity"]."</td>";
 			echo"<br><br>";
 			}
-    	}
+    		}
 		else{
 			echo "Empty";
 		}
-	
 	?>
         </form>
     </main>
