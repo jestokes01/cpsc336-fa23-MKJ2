@@ -6,11 +6,12 @@
 	if ($result->num_rows >  0) {
 		while ($row=$result->fetch_assoc()){
 			echo $row["p_id"]. " ".$row["p_name"]." ".$row["p_qty"];
-		echo"<br><br>;
+		echo"<br><br>";
 		}
+    }
 	else{
 		echo "Empty";
 	}
-	}
+	
 ?>
 </html>
