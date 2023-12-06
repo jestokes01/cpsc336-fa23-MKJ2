@@ -28,7 +28,7 @@
 				echo "<td style='border: 1px solid black; padding: 5px; '>".$row["p_id"]."</td>";
 				echo "<td style='border: 1px solid black; padding: 5px; '>".$row["p_name"]."</td>";
 				echo "<td style='border: 1px solid black; padding: 5px; '>".$row["p_quantity"]."</td>";
-			echo"<br><br>";
+				echo"<br><br>";
 			}
     		}
 		else{
