@@ -17,17 +17,11 @@
         	<!--Delete Item Button-->
         	<input type="submit" value="Delete Item">
           <?php
-            	//include 'connect.php';
-        		$servername = "localhost";
-        		$username = "root";
-        		$password = "";
-        		$dbname = "inventory";
-
-        		$conn = mysqli_connect($servername, $username, $password, $dbname) or die("bad connection: ".mysqli_connect_error());
+            include 'connect.php';
+            $conn = db_connect();
         		$sql = "DELETE FROM inventory WHERE p_id = ".$_POST["itemid"].";";
-        		echo $sql;
         		$result = $conn->query($sql);
-
+            db_close($conn);
         	?>
         </form>
     </main>
