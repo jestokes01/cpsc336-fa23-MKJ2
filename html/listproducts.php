@@ -25,7 +25,7 @@
 		if ($result->num_rows >  0) {
 			echo "<table border='1'>";
 			while ($row=$result->fetch_assoc()){
-				echo "<tr>"
+				echo "<tr>";
 				echo "<td style='border: 1px solid black; padding: 5px; '>".$row["p_id"]."</td>";
 				echo "<td style='border: 1px solid black; padding: 5px; '>".$row["p_name"]."</td>";
 				echo "<td style='border: 1px solid black; padding: 5px; '>".$row["p_quantity"]."</td>";
