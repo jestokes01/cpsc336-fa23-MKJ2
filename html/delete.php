@@ -20,7 +20,6 @@
             include 'connect.php';
             $conn = db_connect();
         		$sql = "DELETE FROM inventory WHERE p_id = ".$_POST["itemid"].";";
-        		echo $sql;
         		$result = $conn->query($sql);
             db_close($conn);
         	?>
