@@ -13,15 +13,20 @@
         	<!--Item ID-->
         	<label for="ItemID">Item ID</label><br>
         	<input name="itemid" id="itemid" type="text" p_id="Item ID"><br><br>
-
         	<!--Delete Item Button-->
         	<input type="submit" value="Delete Item">
           <?php
-            include 'connect.php';
-            $conn = db_connect();
+            	//include 'connect.php';
+        		$servername = "localhost";
+        		$username = "root";
+        		$password = "";
+        		$dbname = "inventory";
+
+        		$conn = mysqli_connect($servername, $username, $password, $dbname) or die("bad connection: ".mysqli_connect_error());
         		$sql = "DELETE FROM inventory WHERE p_id = ".$_POST["itemid"].";";
+        		echo $sql;
         		$result = $conn->query($sql);
-            db_close($conn);
+
         	?>
         </form>
     </main>
