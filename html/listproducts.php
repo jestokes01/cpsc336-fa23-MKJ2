@@ -13,20 +13,18 @@
         	<!--Item ID-->
 	<?php
     	//include 'connect.php';
-		$servername = "localhost";
-		$username = "root";
-		$password = "";
-		$dbname = "inventory";
-			
-		$conn = mysqli_connect($servername, $username, $password, $dbname) or die("bad connection: ".mysqli_connect_error());
+		include 'connect.php';
+		$conn = db_connect();
 		$sql = "SELECT p_id, p_name, p_quantity FROM inventory;";
 	
 		$result = $conn->query($sql);
-		echo "<td style='border: 1px solid black; padding: 5px; '>""ID""</td>";
-		echo "<td style='border: 1px solid black; padding: 5px; '>""Name""</td>";
-		echo "<td style='border: 1px solid black; padding: 5px; '>""Quantity""</td>";
+		echo "<table border='1'>";
+		echo "<tr>";
+		echo "<td style='border: 1px solid black; padding: 5px; '><strong>ID</strong></td>";
+		echo "<td style='border: 1px solid black; padding: 5px; '><strong>Name</strong></td>";
+		echo "<td style='border: 1px solid black; padding: 5px; '><strong>Quantity</strong></td>";
+		echo"</tr>";
 		if ($result->num_rows >  0) {
-			echo "<table border='1'>";
 			while ($row=$result->fetch_assoc()){
 				echo "<tr>";
 				echo "<td style='border: 1px solid black; padding: 5px; '>".$row["p_id"]."</td>";
@@ -39,6 +37,7 @@
 		else{
 			echo "Empty";
 		}
+		db_close($conn);
 	?>
         </form>
     </main>
