@@ -26,11 +26,10 @@
         	<input type="submit" value="Add Item">
           <?php
             	include 'connect.php';
-				      $conn = db_connect();
-        		  $sql = "INSERT INTO inventory (p_id, p_name, p_quantity) VALUES (".$_POST["itemid"].", '".$_POST["itemname"]."', ".$_POST["itemquantity"].");";
-        		  echo $sql;
-        		  $result = $conn->query($sql);
-				      db_close($conn);
+				$conn = db_connect();
+        		$sql = "INSERT INTO inventory (p_id, p_name, p_quantity) VALUES (".$_POST["itemid"].", '".$_POST["itemname"]."', ".$_POST["itemquantity"].");";
+        		$result = $conn->query($sql);
+				db_close($conn);
         	?>
         </form>
     </main>
