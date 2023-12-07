@@ -8,7 +8,7 @@
   </head>
   <body>
     <main>
-        <h1>Inventory List</h1>
+        <h1><font color='3352FF'>Inventory List</font></h1>
         <form action="listproducts.php" method="post">
         	<!--Item ID-->
 	<?php
