@@ -8,7 +8,7 @@
   </head>
   <body>
     <main>
-        <h1>Delete Inventory</h1>
+        <h1><font color='3352FF'>Delete Inventory</font></h1>
         <form action="delete.php" method="post">
         	<!--Item ID-->
         	<label for="ItemID">Item ID</label><br>
