@@ -22,6 +22,9 @@
 		$sql = "SELECT p_id, p_name, p_quantity FROM inventory;";
 	
 		$result = $conn->query($sql);
+		echo "<td style='border: 1px solid black; padding: 5px; '>""ID""</td>";
+		echo "<td style='border: 1px solid black; padding: 5px; '>""Name""</td>";
+		echo "<td style='border: 1px solid black; padding: 5px; '>""Quantity""</td>";
 		if ($result->num_rows >  0) {
 			echo "<table border='1'>";
 			while ($row=$result->fetch_assoc()){
